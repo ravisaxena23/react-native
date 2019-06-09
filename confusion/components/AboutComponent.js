@@ -44,6 +44,7 @@ class About extends Component {
                     title={item.name}
                     subtitle={item.description}
                     hideChevron={true}
+                    leftAvatar={{ source: require('../images/alberto.png')}}
                 />
             );
         };
