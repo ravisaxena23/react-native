@@ -1,7 +1,8 @@
 
 import React, { Component } from 'react';
-import { Text, StyleSheet } from 'react-native';
+import { Text, StyleSheet,ScrollView } from 'react-native';
 import { Card } from 'react-native-elements';
+import * as Animatable from 'react-native-animatable';
 
 //Contact
 class Contact extends Component {
@@ -13,7 +14,10 @@ class Contact extends Component {
     render() {
         
         return(
-            <Card title="Contact Information">
+            <ScrollView>
+                 <Animatable.View animation="fadeInDown" duration={2000} delay={1000}>                
+                <Card
+                    title='Contact Information'>
                     <Text style={cstyles.forparagraph} >
                         121, Clear Water Bay Road{'\n'}
                         Clear Water Bay, Kowloon{'\n'}
@@ -22,7 +26,10 @@ class Contact extends Component {
                         Fax: +852 8765 4321{'\n'}
                         Email:confusion@food.net
                     </Text>
+                
                 </Card>
+                    </Animatable.View>
+             </ScrollView>
         );
     }
 }
